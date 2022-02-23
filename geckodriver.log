@@ -1,0 +1,12 @@
+1645585904255	geckodriver	INFO	Listening on 127.0.0.1:41749
+1645585904258	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "44715" "-no-remote" "-profile" "/tmp/rust_mozprofile1odvL7"
+*** You are running in headless mode.
+1645585904864	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile1odvL7/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:44715/devtools/browser/d7bcd0ce-879c-4dfa-a7c1-0f0f91c6e13a
+1645585905731	Marionette	INFO	Listening on port 42283
+1645585905776	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1645585923057	Marionette	INFO	Stopped listening on port 42283

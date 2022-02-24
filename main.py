@@ -10,11 +10,16 @@ import os
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
+modal = input('(1)Manual | (2)bin2: ')
+path = './bins.txt'
+
+if modal == 2:
+    path == '../bin2/bins.txt'
 cantidad = '10'
 
 open('./ccs.txt', 'w')
 
-def gen(bin, mm, yy, cvv, cantidad):    
+def gen(bin, mm, yy, cvv, cantidad, path):    
     meses = ("", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
              "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
 
@@ -22,7 +27,7 @@ def gen(bin, mm, yy, cvv, cantidad):
     # mm = meses[12]
     # yy = '2024'
     # cvv = '335'
-    sleep(3)
+    #sleep(3)
 
     i_bin = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located(
@@ -75,7 +80,7 @@ def gen(bin, mm, yy, cvv, cantidad):
     open('./ccs.txt', 'a').write(gen_ccs)
     # print(gen_ccs)
 
-comb = open('./bins.txt', 'r').read().split('\n')
+comb = open(path, 'r').read().split('\n')
 
 options = webdriver.FirefoxOptions()
 options.headless = True
@@ -109,7 +114,7 @@ for i in comb:
         cc = f'{cc}{"x"*(16-len(cc))}'
 
     print(f'bin {cc}|{mm}|{yy}|{cvv} => {x} of {len(comb)} generated')
-    gen(cc, mm, yy, cvv, cantidad)
+    gen(cc, mm, yy, cvv, cantidad, path)
     x += 1
 else:
     pass

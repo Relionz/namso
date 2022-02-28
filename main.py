@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 modal = input('(1)Manual | (2)bin2: ')
 path = './bins.txt'
 
-if modal == 2:
+if modal == '2':
     path = '../bin2/bins.txt'
 cantidad = '10'
 
